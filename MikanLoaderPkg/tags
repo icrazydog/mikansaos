@@ -1,0 +1,29 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+DIR_OF_THIRD_PARTY	.ycm_extra_conf.py	/^DIR_OF_THIRD_PARTY = p.join( DIR_OF_THIS_SCRIPT, 'third_party' )$/;"	v
+DIR_OF_THIS_SCRIPT	.ycm_extra_conf.py	/^DIR_OF_THIS_SCRIPT = p.abspath( p.dirname( __file__ ) )$/;"	v
+DIR_OF_WATCHDOG_DEPS	.ycm_extra_conf.py	/^DIR_OF_WATCHDOG_DEPS = p.join( DIR_OF_THIRD_PARTY, 'watchdog_deps' )$/;"	v
+FindCorrespondingSourceFile	.ycm_extra_conf.py	/^def FindCorrespondingSourceFile( filename ):$/;"	f
+GetMemoryMap	Main.c	/^EFI_STATUS GetMemoryMap(struct MemoryMap* map) {$/;"	f
+GetMemoryTypeUnicode	Main.c	/^const CHAR16* GetMemoryTypeUnicode(EFI_MEMORY_TYPE type) {$/;"	f
+IsHeaderFile	.ycm_extra_conf.py	/^def IsHeaderFile( filename ):$/;"	f
+MemoryMap	Main.c	/^struct MemoryMap{$/;"	s	file:
+PathToPythonUsedDuringBuild	.ycm_extra_conf.py	/^def PathToPythonUsedDuringBuild():$/;"	f
+PythonSysPath	.ycm_extra_conf.py	/^def PythonSysPath( **kwargs ):$/;"	f
+SOURCE_EXTENSIONS	.ycm_extra_conf.py	/^SOURCE_EXTENSIONS = [ '.cpp', '.cxx', '.cc', '.c', '.m', '.mm' ]$/;"	v
+SaveMemoryMap	Main.c	/^EFI_STATUS SaveMemoryMap(struct MemoryMap* map, EFI_FILE_PROTOCOL* file){$/;"	f
+Settings	.ycm_extra_conf.py	/^def Settings( **kwargs ):$/;"	f
+UefiMain	Main.c	/^EFI_STATUS EFIAPI UefiMain($/;"	f
+buffer	Main.c	/^  VOID* buffer;$/;"	m	struct:MemoryMap	file:
+buffer_size	Main.c	/^  UINTN buffer_size;$/;"	m	struct:MemoryMap	file:
+compilation_database_folder	.ycm_extra_conf.py	/^compilation_database_folder = ''$/;"	v
+database	.ycm_extra_conf.py	/^database = None$/;"	v
+descriptor_size	Main.c	/^  UINTN descriptor_size;$/;"	m	struct:MemoryMap	file:
+descriptor_version	Main.c	/^  UINT32 descriptor_version;$/;"	m	struct:MemoryMap	file:
+flags	.ycm_extra_conf.py	/^flags = [$/;"	v
+map_key	Main.c	/^  UINTN map_key;$/;"	m	struct:MemoryMap	file:
+map_size	Main.c	/^  UINTN map_size;$/;"	m	struct:MemoryMap	file:

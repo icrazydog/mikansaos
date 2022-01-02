@@ -1,0 +1,7 @@
+./build.sh mloader
+./build.sh run
+
+./cpLoaderAndKernel.sh & ./run.sh Loader.efi kernel.elf
+
+qemu-img create -f raw $DISK_IMG 200M
+mkfs.fat -n 'MIKAN OS' -s 2 -f 2 -R 32 -F 32 $DISK_IMG

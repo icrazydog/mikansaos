@@ -1,0 +1,13 @@
+{
+  "files.associations": {
+    "cstdint": "cpp",
+    "random": "cpp",
+    "logger.hpp": "c",
+    "cstdlib": "cpp",
+    "limits": "cpp",
+    "array": "cpp",
+    "types.h": "c",
+    "cstdio": "cpp"
+  },
+  "C_Cpp.default.cppStandard": "c++17"
+}

@@ -1,0 +1,45 @@
+#include "usb/classdriver/mouse.hpp"
+
+#include "logger.hpp"
+#include "usb/memory.hpp"
+
+namespace usb {
+  std::function<HIDMouseDriver::ObserverType> HIDMouseDriver::default_observer;
+
+  HIDMouseDriver::HIDMouseDriver(Device* dev, int interface_index)
+      : HIDBaseDriver{dev, interface_index, 3} {
+  }
+
+  void HIDMouseDriver::SubscribeMouseMove(
+      std::function<ObserverType> observer) {
+    _observers[_num_observers++] = observer;
+  }
+
+  void HIDMouseDriver::NotifyMouseMove(uint8_t buttons, int8_t displacement_x, int8_t displacement_y) {
+    for (int i = 0; i < _num_observers; ++i) {
+      _observers[i](buttons, displacement_x, displacement_y);
+    }
+  }
+
+  Error HIDMouseDriver::OnDataReceived() {
+    uint8_t buttons = Buffer()[0];
+    int8_t displacement_x = Buffer()[1];
+    int8_t displacement_y = Buffer()[2];
+    NotifyMouseMove(buttons, displacement_x, displacement_y);
+    Log(kDebugMass, "%02x,(%3d,%3d)\n", buttons, displacement_x, displacement_y);
+    return MAKE_ERROR(Error::kSuccess);
+  }
+
+  void* HIDMouseDriver::operator new(size_t size) {
+    return AllocMem(sizeof(HIDMouseDriver), 0, 0);
+  }
+
+  void HIDMouseDriver::operator delete(void* ptr) noexcept {
+    FreeMem(ptr);
+  }
+
+  
+
+
+
+}
